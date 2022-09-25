@@ -7,6 +7,8 @@ $clr: #24A3FF;
 
     .content {
         background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+        border-radius: 0px 0px 12px 12px;
+        box-shadow: 0 15px 0 -5px #CACADB, 0 45px 0 -20px #E7E7F2;
 
         .splash {
             width: 90%;
@@ -15,6 +17,10 @@ $clr: #24A3FF;
             .header {
                 padding-top: 3%;
                 @include setFlex(flex, row, space-between);
+
+                .logo__title {
+                    font-style: normal;
+                }
 
                 .span-logo {
                     color:#F0145A;
@@ -93,12 +99,13 @@ $clr: #24A3FF;
         }
 
         .services {
-
+            padding: 3% 0 0 5%;
             .services__subtitle{
                 color: $clr;
             }
-
+            
             .services__title {
+                padding: 1% 0 2% 0;
                 font-size: 1.5rem;
                 background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
                 -webkit-background-clip: text;
@@ -107,8 +114,55 @@ $clr: #24A3FF;
             }
 
             .box {
-                @include setFlex(flex, row, start, center);
-                width: 90%;
+                @include setFlex(flex, row, start, start);
+                flex-wrap: wrap;
+
+                .box__item {
+                    width: 33%;
+                    padding: 2% 5% 2% 0;
+
+                    .box__subtitle {
+                        padding: 5% 0;
+                        color: $clr;
+                    }
+                }
+            }
+        }
+
+    }
+    .main {
+        padding: 5%;
+        color: black;
+        
+        .teamleader {
+            @include setFlex(flex, row, start, start);
+            background-color: #F5F5FA;
+            border-radius: 12px;
+            
+            .teamleader__text {
+                padding: 2% 0 0 2%;
+
+                .subtitle {
+                    color: $clr;
+                }
+
+                .clon {
+                    padding: 1% 9% 3% 0;
+                    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font-size: 2.3rem;
+                }
+
+                .name,
+                .job {
+                    color:  #B3B3BA;
+                }
+
+                .name {
+                    padding: 2% 0;
+                }
             }
         }
     }
