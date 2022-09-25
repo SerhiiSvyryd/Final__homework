@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: white;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+}
+.content .splash {
+  width: 90%;
+  margin: auto;
+}
+.content .splash .header {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .splash .header .span-logo {
+  color: #F0145A;
+}
+.content .splash .header .info {
+  display: flex;
+  flex-direction: column;
+}
+.content .splash .header .info .frame,
+.content .splash .header .info .nav {
+  display: flex;
+  flex-direction: row;
+}
+.content .splash .slogan {
+  display: flex;
+}
+.content .splash .slogan .slogan__title {
+  padding: 29% 2% 40% 24%;
+  z-index: 1;
+  font-size: 2.4rem;
+}
+.content .splash .slogan .image__item--primary {
+  position: absolute;
+  right: 49%;
+  top: 0%;
+}
+.content .splash .slogan .image__item--secondary {
+  position: absolute;
+  right: 30.4%;
+  top: 59%;
+}
+.content .menu-dropdown {
+  padding-left: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+.content .menu-dropdown .menu-dropdown__item {
+  width: 80%;
+  margin: 0 4%;
+  line-height: 46px;
+  font-size: 2rem;
+  color: #B3B3BA;
+  text-align: end;
+}
+.content .menu-dropdown .menu-dropdown__item #const {
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.content .menu-dropdown .menu-dropdown__item li {
+  list-style-type: none;
+}
+.content .menu-dropdown .menu-dropdown__text {
+  margin-left: 4%;
+  text-align: start;
+}
+.content .menu-dropdown .menu-dropdown__text h4 {
+  padding: 4% 0;
+  font-size: 1.5rem;
+}
+.content .menu-dropdown .menu-dropdown__text p {
+  width: 70%;
+}/*# sourceMappingURL=style.css.map */
