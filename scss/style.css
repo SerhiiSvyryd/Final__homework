@@ -141,7 +141,6 @@ a {
 
 .main {
   padding: 5%;
-  color: black;
 }
 .main .teamleader {
   display: flex;
@@ -171,4 +170,26 @@ a {
 }
 .main .teamleader .teamleader__text .name {
   padding: 2% 0;
+}
+.main .buttons {
+  text-align: center;
+}
+.main .buttons .prev,
+.main .buttons .next,
+.main .buttons .pause {
+  width: 16px;
+  height: 16px;
+  background-color: rgb(36, 163, 255);
+  border-radius: 24px;
+}
+
+.clients {
+  color: rgb(50, 50, 100);
+}
+.clients .clients__block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-collapse: collapse;
+  vertical-align: middle;
 }/*# sourceMappingURL=style.css.map */

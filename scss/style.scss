@@ -132,8 +132,7 @@ $clr: #24A3FF;
     }
     .main {
         padding: 5%;
-        color: black;
-        
+
         .teamleader {
             @include setFlex(flex, row, start, start);
             background-color: #F5F5FA;
@@ -164,5 +163,31 @@ $clr: #24A3FF;
                     padding: 2% 0;
                 }
             }
+        }
+
+        .buttons {
+            text-align: center;
+            
+
+            .prev,
+            .next,
+            .pause {
+                width: 16px;
+                height: 16px;
+                background-color: rgba(36, 163, 255, 1);
+                border-radius: 24px;
+            }
+        }
+    }
+
+    .clients {
+        color: rgba(50, 50, 100, 1);
+
+        .clients__block {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-collapse: collapse;
+            vertical-align: middle;
         }
     }
