@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
@@ -16,14 +17,7 @@
             <div class="splash">
                 <div class="header">
                     <div class="logo">
-                        <div class="logo__title">
-                            <h1>
-                            <span class="span-logo">h</span>legal
-                            </h1>
-                        </div>
-                        <div class="logo__subtitle">
-                            law company
-                        </div>
+                        <img src="images/icons/Logo.svg" alt="logo">
                     </div>
                     <div class="info">
                         <div class="frame">
@@ -33,7 +27,7 @@
                             <div class="frame__lang">
                                 РУ
                             </div>
-                            <div class="frame__lang">
+                            <div class="frame__lang--primary">
                                 EN
                             </div>
                             <div class="frame__address">
@@ -71,11 +65,12 @@
                             you legal solutions provider
                         </h3>
                     </div>
-                    <div class="image__item image__item--primary">
-                        <img src="images/Union.png" alt="">
+                    <div class="menu">
+                        <button class="btn-menu"><i class="fa-solid fa-chevron-down" id="fafa"></i></button>
+                        <!--<a href="" class="btn-menu"><i class="fa-solid fa-chevron-down" id="fafa"></i></a>--> 
                     </div>
-                    <div class="image__item image__item--secondary">
-                        <img src="images/Union0.png" alt="">
+                    <div class="image__item image__item--primary">
+                        <img src="images/h.png" alt="">
                     </div>
                 </div>
             </div>
@@ -99,7 +94,7 @@
             </div>
             <div class="services">
                 <div class="services__subtitle">
-                    Services >
+                    Services <i class="fa-solid fa-chevron-right"></i>
                 </div>
                 <div class="services__title">
                     <h2>
@@ -178,35 +173,91 @@
             </div>
         </div>
         <div class="main">
-            <div class="teamleader">
-                <div class="teamleader__photo">
-                    <img src="images/image.svg" alt="photo">
+            <div class="slider middle">
+                <div class="slides">
+                   <input type="radio" name="bar" id="row1" checked>
+                   <input type="radio" name="bar" id="row2">
+                   <input type="radio" name="bar" id="row3">
+            
+                   <div class="slide s1">
+                        <div class="teamleader">
+                            <div class="teamleader__photo">
+                                <img src="images/image.svg" alt="photo">
+                            </div>
+                            <div class="teamleader__text">
+                                <div class="subtitle">
+                                    команда <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="clon">
+                                    <h4>
+                                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                                    </h4>
+                                </div>
+                                <div class="name">
+                                    Олександр Олександровський
+                                </div>
+                                <div class="job">
+                                    Керуючий партнер
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="slide">
+                        <div class="teamleader">
+                            <div class="teamleader__photo">
+                                <img src="images/image.svg" alt="photo">
+                            </div>
+                            <div class="teamleader__text">
+                                <div class="subtitle">
+                                    команда <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="clon">
+                                    <h4>
+                                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                                    </h4>
+                                </div>
+                                <div class="name">
+                                    Олександр Олександровський
+                                </div>
+                                <div class="job">
+                                    Керуючий партнер
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="slide">
+                        <div class="teamleader">
+                            <div class="teamleader__photo">
+                                <img src="images/image.svg" alt="photo">
+                            </div>
+                            <div class="teamleader__text">
+                                <div class="subtitle">
+                                    команда <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="clon">
+                                    <h4>
+                                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                                    </h4>
+                                </div>
+                                <div class="name">
+                                    Олександр Олександровський
+                                </div>
+                                <div class="job">
+                                    Керуючий партнер
+                                </div>
+                            </div>
+                        </div>
+                   </div>
                 </div>
-                <div class="teamleader__text">
-                    <div class="subtitle">
-                        команда >
-                    </div>
-                    <div class="clon">
-                        <h4>
-                            Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
-                        </h4>
-                    </div>
-                    <div class="name">
-                        Олександр Олександровський
-                    </div>
-                    <div class="job">
-                        Керуючий партнер
-                    </div>
+                <div class="navigation">
+                   <label for="row1" class="bar"></label>
+                   <label for="row2" class="bar"></label>
+                   <label for="row3" class="bar"></label>
                 </div>
-            </div>
-            <div class="buttons">
-                <button class="prev"></button>
-                <button class="next"></button>
-                <button class="pause"></button>
             </div>
         </div>
         <div class="clients">
-            <div class="cleitns__title">
+            <div class="clietns__title">
                 <h4>
                     They already trust us
                 </h4>
@@ -251,11 +302,13 @@
             </div>
         </div>
         <div class="public">
-            <button class="public__button">
-                Publications>
-            </button>
+            <div class="public__button">
+                Publications <i class="fa-solid fa-chevron-right"></i>
+            </div>
             <div class="public__title">
-                We have something to tell
+                <h4>
+                    We have something to tell
+                </h4>
             </div>
             <div class="public__block">
                 <div class="public__item">
@@ -263,7 +316,9 @@
                         <img src="images/associate.svg" alt="associate">
                     </div>
                     <div class="public__subtitle">
-                        Equity associate
+                        <h5>
+                            Equity associate
+                        </h5>
                     </div>
                     <div class="public__date">
                         April 22
@@ -277,7 +332,9 @@
                         <img src="images/gdpr.svg" alt="gdpr">
                     </div>
                     <div class="public__subtitle">
-                        Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
+                        <h5>
+                            Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
+                        </h5>
                     </div>
                     <div class="public__date">
                         September 29
@@ -286,12 +343,14 @@
                         And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
                     </div>
                 </div>
-                <div class="public__item">
+                <div class="public__item" id="pub">
                     <div class="public__image">
-                        <img src="images/millenial.svg" alt="millenial">
+                        <img src="images/arrow-point-to-right.png" alt="millenial">
                     </div>
                     <div class="public__subtitle">
-                        Millennial Testament
+                        <h5>
+                            Millennial Testament
+                        </h5>
                     </div>
                     <div class="public__date">
                         August 19
@@ -305,10 +364,19 @@
         <div class="footer">
             <div class="footer__adress">
                 <div class="map">
-
+                    Kyiv, Mechnikova str, 14/1
+                    <span id="map">On map</span>
                 </div>
                 <div class="contact">
-
+                    <div class="contact__logo">
+                        <img src="images/icons/face.svg" alt="facebook">
+                    </div>
+                    <div class="contact__number">
+                        0800 211 927
+                    </div>
+                    <div class="contact__mail">
+                        contact@forstudy.space
+                    </div>
                 </div>
             </div>
             <div class="end">
@@ -316,5 +384,6 @@
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
