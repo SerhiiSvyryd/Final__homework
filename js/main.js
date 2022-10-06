@@ -12,6 +12,20 @@
 
 })();
 
+(function() {
+    
+    let but = document.querySelector('.btn-men');
+    console.log(but);
+    let dot = document.querySelector('.box');
+
+    but.addEventListener('click', function() {
+    
+    dot.classList.toggle('.box_active');
+
+});
+
+})();
+
 
 
 

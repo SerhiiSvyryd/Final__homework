@@ -24,6 +24,7 @@ $clr: #24A3FF;
 }
 
 .content {
+    width: 105vw;
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 0px 0px 12px 12px;
     box-shadow: 0 15px 0 -5px #CACADB, 0 45px 0 -20px #E7E7F2;
@@ -44,7 +45,7 @@ $clr: #24A3FF;
                 z-index: 2;
             }
 
-            .info {
+            .card-info {
                 position: absolute;
                 width: 100%;
                 padding: 1% 0;
@@ -53,44 +54,60 @@ $clr: #24A3FF;
                 background: rgba(245, 245, 250, 0.2);
 
 
-                .frame {
+                .card-info__frame {
                     @include setFlex(flex, row, space-between);
                     width: 100%;
                 }
 
                 .nav,
-                .frame__address,
-                .frame__logo {
+                .card-info__address,
+                .card-info__logo {
                     display: none;
                 }
 
-                .frame__lang {
+                .card-info__lang {
                     margin-right: 1%;
                     padding: 2%;
                 }
 
-                .frame__lang--primary {
+                .card-info__lang--primary {
                     background: rgba(240, 20, 90, 1);
                     border: 4px solid rgb(240, 20, 90);
                     border-radius: 8px;
                     z-index: 2;
                 }
 
-                .frame__number {
+                .card-info__number {
                     width: 100%;
                     margin-left: 39%;
                 }
 
                 .nav {
-                    padding-left: 5%;
+                    margin-right: 5%;
 
-                    .nav__item {
-                        padding: 0 5% 0 0;
+                    .nav__box {
+                        width: 40%;
+                        list-style-type: none;
+                        
+                        .nav__item {
+                            padding: 0 4% 0 0;
+                            display: inline;
+                            
+                            .nav__link {
+                                color: white;
+
+                                &:hover {
+                                    color: #F0145A;
+
+                                }
+                            }
+                        }
                     }
+
                 }
 
-                .frame__address:hover,
-                .frame__number:hover,
+                .card-info__address:hover,
+                .card-info__number:hover,
                 .nav__item:hover,
                 .itl {
                     color: rgba(240, 20, 90, 1);
@@ -116,7 +133,7 @@ $clr: #24A3FF;
             
             .btn-menu {
                 color: white;
-                background-color: #323264;
+                background-color: rgba($color: #000000, $alpha: 0);
             }
 
             #fafa {
@@ -152,15 +169,27 @@ $clr: #24A3FF;
         @include setFlex(flex, column, center, center);
     
         .menu-dropdown__item {
+            @include setFlex(flex, column, center, center);
             padding-bottom: 10%;
             line-height: 46px;
             font-size: 2rem;
             color: #B3B3BA;
             text-align: center;
 
-            
-            li {
-                list-style-type: none;
+
+            .row {
+                
+                .row__item {
+                    list-style-type: none;
+        
+                    .row__link {
+                        color: white;
+        
+                        &:hover {
+                            color: #F0145A;
+                        }
+                    }
+                }
             }
         }
 
@@ -172,6 +201,8 @@ $clr: #24A3FF;
             width: 80%;
             background: rgba(255, 255, 255, 0.3);
         }
+
+
 
         .menu-dropdown__text { 
             margin: 0 7%;
@@ -189,12 +220,24 @@ $clr: #24A3FF;
 
     .services {
         padding: 5% 0 0 7%;
+
+        .services__subtitle {
+            
+            a {
+                color: #24A3FF;
+            }
+
+            a:hover {
+                color: #F0145A;
+            }
+        }
       
         .services__title {
             padding: 1% 0 2% 0;
             font-size: 1.5rem;
         }
 
+        
         .box {
             @include setFlex(flex, column, start, start);
 
@@ -203,6 +246,15 @@ $clr: #24A3FF;
 
                 .box__subtitle {
                     padding: 5% 0;
+
+                        a {
+                            color: #24A3FF;
+                        }
+    
+                        a:hover {
+                            color: #F0145A;
+                        }
+                    }
                 }
             }
         }
@@ -312,19 +364,78 @@ $clr: #24A3FF;
     }
 
     .clients {
+        width: 100%;
         padding-bottom: 3%;
         color: rgba(50, 50, 100, 1);
 
+        .clietns__title {
+            margin: 10% 0 3% 0;
+            text-align: center;
+        }
+
         .clients__block {
+            width: 100%;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             border-collapse: collapse;
             vertical-align: middle;
 
-            img {
-                width: 379px;
+            .images {
+                width: 100%;
+                height: 120px;
+                padding-top: 5%;
+                text-align: center;
             }
+
+            .images--primary {
+                background-color: rgba(28, 66, 128, 1);
+            }
+
+            .images--secondary {
+                background-color: rgba(20, 54, 70, 1);
+            }
+
+            .images--specialy {
+                background-color: rgba(244, 139, 48, 1);
+            }
+
+            .images--focus {
+                background-color: rgba(158, 77, 195, 1);
+            }
+
+            .images--three {
+                background-color: rgba(253, 147, 57, 1);
+            }
+
+            .images--wow {
+                background-color: rgba(226, 226, 228, 1);
+            }
+
+            .images--cool {
+                background-color: rgba(199, 28, 54, 1);
+            }
+
+            .images--eco {
+                background-color: rgba(220, 243, 249, 1);
+            }
+
+            .images--ingratek {
+                background-color: rgba(234, 234, 234, 1);
+            }
+
+            .images--city {
+                background-color: rgba(40, 34, 64, 1);
+            }
+
+            .images--art {
+                background-color: rgba(29, 69, 104, 1);
+            }
+
+            .images--ultima {
+                background-color: rgba(0, 0, 0, 1);
+            }
+
         }
     }
 
@@ -402,10 +513,14 @@ $clr: #24A3FF;
                 padding-top: 8%;
                 display: block;
                 text-align: center;
+
+                &:hover {
+                    color: #F0145A;
+                }
             }
 
             .contact {
-                @include setFlex(flex, column);
+                @include setFlex(flex, column, center, center);
                 padding-bottom: 8%;
             }
 
@@ -413,6 +528,16 @@ $clr: #24A3FF;
                 color: #46466E;
                 padding: 8% 0;
                 font-size: 1.3rem;
+
+                &:hover {
+                    color: #F0145A;
+                }
+            }
+
+            .contact__mail {
+                &:hover {
+                    color: #F0145A;
+                }
             }
         }
 
@@ -421,7 +546,7 @@ $clr: #24A3FF;
             margin-bottom: 8%;
         }
     }
-}
+
 
 
 
@@ -437,71 +562,54 @@ $clr: #24A3FF;
                 padding: 5% 0 0 2%;
             }
 
-            .info {
+            .card-info {
                 width: 80%;
                 background: none;
 
                 .nav,
-                .frame__address,
-                .frame__logo {
+                .card-info__address,
+                .card-info__logo {
                     display: block;
                 }
 
-                .frame,
+                .card-info__frame,
                 .nav {
-                    @include setFlex(flex, row);
+                    @include setFlex(flex, row, start, center);
                     width: 100%;
                 }
 
-                .frame__lang {
+                .card-info__lang {
                     margin-right: 1%;
                     padding: 2%;
                 }
 
-                .frame__address {
-                    padding: 0 2% 0 8%;
-                    width: 52%;
+                .card-info__address {
+                    padding: 0;
+                    width: 29%;
                     color: #B3B3BA;
                     z-index: 2;
                 }
 
-                .frame__address::before,
-                .frame__address::after {
-                    content: '';
-                    position: absolute;
-                    width: 6px;
-                    height: 6px;
-                    background: rgba(255, 255, 255,);
-                    border-radius: 12px;
+                .dot {
+                    width: 8px;
+                    height: 7px;
+                    margin: 0 2%;
+                    background: white;
+                    border-radius: 9px;
                 }
 
-                .frame__address::before{
-                    margin: 1%;
-                    left: 170px;
-                }
-
-                .frame__address::after  {
-                    margin: 1% 5% 0 5%;
-                }
-
-                .frame__number {
-                    width: 30%;
-                    margin: 0 4%;
-                }
-
-                .frame__number::after {
-                    content: '';
-                    position: absolute;
-                    margin: 1% 5% 0 5%;
-                    width: 6px;
-                    height: 6px;
-                    background: rgba(255, 255, 255,);
-                    border-radius: 12px;
+                .card-info__number {
+                    width: 15%;
+                    margin: 0;
                 }
 
                 .nav {
-                    padding: 20% 28% 0 0%;
+                    margin: 15% 56% 0% 60%;
                     z-index: 2;
+
+                    .nav__box {
+                        width: 80%;
+                    }
                 }
 
             }
@@ -534,6 +642,14 @@ $clr: #24A3FF;
         }
     }
 
+    .menu-dropdown {
+        display: none;
+    }
+
+    .menu-dropdown_active {
+        @include setFlex(flex, column, center, center);
+    }
+
     .services {
         width: 768px;
 
@@ -563,19 +679,22 @@ $clr: #24A3FF;
     }
 
     .clients {
+        width: 100%;
 
         .clietns__title {
             padding-left: 1% 
         }
-
+        
         .clients__block {
-            @include setFlex(flex, row);
+            width: 100%;
 
-            img {
-                width: 250px;
+            .images {
+                width: 33%;
+                padding-top: 2%;
             }
         }
     }
+}
 
     .public {
         padding: 2% 5% 2% 5%;
@@ -606,7 +725,7 @@ $clr: #24A3FF;
     }
 
     .footer {
-        @include setFlex(flex, row, space-between);
+        @include setFlex(flex, column, space-between);
         padding: 5%;
 
         .footer__adress {
@@ -619,12 +738,11 @@ $clr: #24A3FF;
             }
 
             .contact {
-                @include setFlex(flex, row);
-
+                @include setFlex(flex, column, center, center);
             }
 
             .contact__number {
-                padding: 0 3%;
+                padding: 6% 3%; 
                 color: #46466E;
             }
         }
@@ -633,7 +751,6 @@ $clr: #24A3FF;
             color: #B3B3BA;
         }
     }
-}
 
 
 @media screen and (min-width: 1024px) {
@@ -648,33 +765,31 @@ $clr: #24A3FF;
                 padding: 1% 0 0 1%;
             }
 
-            .info {
+            .card-info {
                 @include setFlex(flex, column, end);
-                width: 100%;
+                width: 95%;
 
-                .frame,
+                .card-info__frame,
                 .nav {
                     @include setFlex(flex, row, end);
-                    width: 80%;
+                    width: 79%;
                 }
 
-                .frame__lang {
+                .card-info__lang {
                     margin-right: 1%;
                     padding: 0;
                 }
 
-                .frame__address {
-                    padding: 0 0 0 5%;
-                    width: 28%;
+                .card-info__address {
+                    width: 23%;
                 }
 
-                .frame__number {
-                    width: 12%;
-                    margin: 0 2%;
+                .card-info__number {
+                    width: 11%;
                 }
 
                 .nav {
-                    padding: 2% 0% 0 0%;
+                    margin: 2% 0 0 42%;
                 }
             }
 
@@ -710,6 +825,10 @@ $clr: #24A3FF;
         }
     }
     
+    
+    .menu-dropdown {
+        display: none;
+    }
 
     .menu-dropdown_active {
         padding-left: 8%;
@@ -775,6 +894,14 @@ $clr: #24A3FF;
 
                 .box__subtitle {
                     padding: 5% 0;
+
+                    a {
+                        color: #24A3FF;
+                    }
+
+                    a:hover {
+                        color: #F0145A;
+                    }
                 }
             }
         }
@@ -823,11 +950,12 @@ $clr: #24A3FF;
         .clietns__title {
             padding: 0 40% 5%;
         }
-
+            
         .clients__block {
+            width: 100%;
 
-            img {
-                width: 250px;
+            .images {
+                width: 25%;
             }
         }
     }
@@ -896,10 +1024,11 @@ $clr: #24A3FF;
         @include setFlex(flex, row, space-between);
 
         .footer__adress {
-            width: 45%;
+            width: 60%;
             @include setFlex(flex, column);
             
             .map {
+                width: 100%;
                 color: #323264;
             }
 
@@ -909,15 +1038,22 @@ $clr: #24A3FF;
             }
 
             #map {
+                width: 15%;
                 display: inline-block;
             }
 
             .contact {
+                width: 100%;
                 padding-left: 15%;
                 @include setFlex(flex, row);
+
+                .contact__logo {
+                    width: 10%;
+                }
             }
 
             .contact__number {
+                width: 30%;
                 padding: 0;
                 color: #46466E;
             }
@@ -940,27 +1076,37 @@ $clr: #24A3FF;
             @include setFlex(flex, row, space-between);
             padding-top: 3%;
 
-            .info {
+            .card-info {
 
-                .frame,
+                .card-info__frame,
                 .nav {
-                    width: 74%;
+                    width: 100%;
                 }
 
-                .frame {
+                .nav {
+                    padding-left: 58%;
+                }
+
+                .card-info__frame {
                     padding-right: 4%;
                 }
 
-                .frame__lang {
+                .card-info__lang {
                     padding: 0;
                 }
 
-                .frame__address {
-                    width: 24%
+                .card-info__address {
+                    width: 17%;
+                    padding: 0;
                 }
 
-                .frame__number {
-                    width: 12%;
+                .card-info__number {
+                    width: 7%;
+                    margin: 0;
+                }
+
+                .nav {
+                    margin: 2% 0 0 0;
                 }
             }
         }
@@ -1001,6 +1147,7 @@ $clr: #24A3FF;
     .menu-dropdown_active {
         padding-left: 8%;
         @include setFlex(flex, row, space-between, center);
+    }
 
         .menu-dropdown__item {
             width: 80%;
@@ -1028,7 +1175,7 @@ $clr: #24A3FF;
                 width: 70%;
             }
         }
-    }
+    
 
     .services {
         padding: 3% 0 0 5%;
@@ -1092,6 +1239,7 @@ $clr: #24A3FF;
     }
 
     .clients {
+        width: 100%;
         padding-bottom: 3%;
         color: rgba(50, 50, 100, 1);
 
@@ -1102,9 +1250,6 @@ $clr: #24A3FF;
             border-collapse: collapse;
             vertical-align: middle;
 
-            img {
-                width: 360px;
-            }
         }
     }
 
@@ -1125,8 +1270,16 @@ $clr: #24A3FF;
 }
 
 @media screen and (min-width: 1920px) {
-    
 
+    
+    
+    .menu-dropdown {
+        display: none;
+    }
+
+    .menu-dropdown_active {
+        @include setFlex(flex, column, center, center);
+    }
 }
 
 
@@ -1143,33 +1296,33 @@ $clr: #24A3FF;
                 @include setFlex(flex, row, space-between);
                 padding-top: 3%;
 
-                .info {
+                .card-info {
                     @include setFlex(flex, column);
                     width: 50%;
 
-                    .frame,
+                    .card-info__frame,
                     .nav {
                         @include setFlex(flex, row);
                         width: 100%;
                     }
 
-                    .frame__lang {
+                    .card-info__lang {
                         margin-right: 1%;
                         padding: 2%;
                     }
 
-                    .frame__lang--primary {
+                    .card-info__lang--primary {
                         background: rgba(240, 20, 90, 1);
                         border: 4px solid rgb(240, 20, 90);
                         border-radius: 8px;
                     }
 
-                    .frame__address {
+                    .card-info__address {
                         padding: 0 2%;
                         width: 35%;
                     }
 
-                    .frame__number {
+                    .card-info__number {
                         width: 20%;
                     }
                 }
@@ -1403,3 +1556,5 @@ $clr: #24A3FF;
     }
 
     */
+
+    
